@@ -1,7 +1,8 @@
-<h1>User: <%=@recipe.name %></h1>
+<h1>User: <%=@ingredient.name %></h1>
 
-<h4>Ingredients:</h4>
+<h4>Recipies associated with <%=@ingredient.name %> </h4>
 
-<% @recipe.ingredients.each do |i| %><br>
-  <%= link_to i.name, ingredient_path(i) %>
+<% @ingredient.recipes.each do |i| %><br>
+  <%= link_to i.name, recipe_path(i) %>
 <% end %>
+

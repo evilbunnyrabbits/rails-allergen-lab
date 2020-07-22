@@ -1,7 +1,7 @@
-<h1>All Recipes</h1>
+<h1>All Ingredients</h1>
 
-<h3><a href="../recipes/new">Create Recipe</a></h3>
+<h3><a href="../ingredients/new">Create Ingredient</a></h3>
 
-<% @recipes.each do |recipe| %>
-  <%= link_to recipe.name, recipe_path(recipe) %> - Number of Ingredients: <%= recipe.ingredients.count %><br>
+<% @ingredients.each do |item| %>
+  <%= link_to item.name, ingredient_path(item) %>  Number of Allergies = <%= item.allergies.count  %><br>
 <%end %>
