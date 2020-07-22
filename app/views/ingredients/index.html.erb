@@ -1,0 +1,7 @@
+<h1>All Recipes</h1>
+
+<h3><a href="../recipes/new">Create Recipe</a></h3>
+
+<% @recipes.each do |recipe| %>
+  <%= link_to recipe.name, recipe_path(recipe) %> - Number of Ingredients: <%= recipe.ingredients.count %><br>
+<%end %>
